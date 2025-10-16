@@ -1,0 +1,14 @@
+Restricted Academic License
+Copyright (c) 2025 UC Berkeley Cal Transpo Team
+
+This repository and its contents are intended solely for use by UC Berkeley Cal Transpo student teams
+participating in the Interdistrict Transportation Competition (ITC) 2025.
+
+Use, reproduction, or distribution of any material from this repository prior to the conclusion of the
+competition (November 16, 2025) is strictly prohibited without written permission from the UC Berkeley
+Cal Transpo team.
+
+After the conclusion of the competition, the authors may choose to release the repository under an
+open-source license (e.g., MIT or BSD-2), at their discretion.
+
+All rights reserved.
