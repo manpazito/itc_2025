@@ -507,3 +507,43 @@ def aoi_dashboard(
         fig.savefig(save_path, bbox_inches="tight", dpi=300)
     plt.show()
     return fig, axes
+
+
+import plotly.graph_objects as go
+
+def plot_transition_matrix(A):
+    k = 3  # keep top-k per previous purpose
+    min_prob = 0.0  # optionally filter tiny links
+
+    edges = (  # type: ignore
+        A.where(A > min_prob)
+        .stack()  # index: (current, previous)
+        .groupby(level=1, group_keys=False)  # group by previous
+        .nlargest(k)  # top-k currents for each previous
+    )
+
+    # Map labels to node indices
+    prev_labels = list(A.columns)
+    curr_labels = list(A.index)
+    labels = prev_labels + curr_labels
+    prev_idx = {p: i for i, p in enumerate(prev_labels)}
+    curr_idx = {c: i for i, c in enumerate(curr_labels)}
+
+    # Build sankey arrays
+    sources = edges.index.get_level_values(1).map(prev_idx).to_list()
+    targets = (edges.index.get_level_values(0).map(curr_idx) + len(prev_labels)).to_list()
+    values = edges.values.tolist()
+
+    # Plot
+    fig = go.Figure(
+        data=[
+            go.Sankey(
+                node=dict(label=labels, pad=18, thickness=18),
+                link=dict(source=sources, target=targets, value=values),
+            )
+        ]
+    )
+    fig.update_layout(
+        title_text="Dominant Trip Purpose Transitions (P(current | previous))", font_size=10
+    )
+    fig.show()
