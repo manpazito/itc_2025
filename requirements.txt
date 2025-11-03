@@ -1,0 +1,8 @@
+geopandas
+pandas
+osmnx
+network_functions
+matplotlib
+numpy
+pyarrow
+shapely
