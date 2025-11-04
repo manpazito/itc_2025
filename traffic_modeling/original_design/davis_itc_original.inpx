@@ -3556,6 +3556,47 @@
 			</vehCompRelFlows>
 		</vehicleComposition>
 	</vehicleCompositions>
+	<vehicleRoutingDecisionsStatic>
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="1" name="" no="1" pos="0.46399158010714064" routeChoiceMeth="STATIC">
+			<vehRoutSta>
+				<vehicleRouteStatic destLink="12" destPos="32.764398031949227" formula="" name="" no="1" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10007"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+				<vehicleRouteStatic destLink="22" destPos="17.977261322700887" formula="" name="" no="2" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10003"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+				<vehicleRouteStatic destLink="5" destPos="29.728820184501551" formula="" name="" no="3" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10011"/>
+						<intObjectRef key="2"/>
+						<intObjectRef key="10019"/>
+						<intObjectRef key="3"/>
+						<intObjectRef key="10035"/>
+						<intObjectRef key="4"/>
+						<intObjectRef key="10036"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+				<vehicleRouteStatic destLink="14" destPos="19.27736359078034" formula="" name="" no="4" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10011"/>
+						<intObjectRef key="2"/>
+						<intObjectRef key="10021"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+				<vehicleRouteStatic destLink="19" destPos="29.714767344206329" formula="" name="" no="5" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10011"/>
+						<intObjectRef key="2"/>
+						<intObjectRef key="10015"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+			</vehRoutSta>
+		</vehicleRoutingDecisionStatic>
+	</vehicleRoutingDecisionsStatic>
 	<vehicleTypes>
 		<vehicleType alightTm="0" anmFlag="false" boardTm="0" capExact="false" capacity="5" category="CAR" clearTmPT="0" colorDistr1="1" colorDistr2="2" desAccelFunc="1" desCurveSpeedFunc="1" desDecelFunc="1" distCoeffPerMeter="0" doorClosDur="2" dwellTmIsAdd="true" equip="" extDriver="false" extDriverDLLFile="" extDriverParFile="" extEmissionDLLFile="" linkCostCoeff="1" maxAccelFunc="1" maxDecelFunc="1" model2D3DDistr="10" name="Car" no="100" occupDistr="1" travTmCoeff="1">
 			<parkLotSelPars>
